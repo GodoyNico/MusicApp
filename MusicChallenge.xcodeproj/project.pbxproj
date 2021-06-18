@@ -15,6 +15,8 @@
 		5DBE6F3E267BF1AA00124F88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBE6F3C267BF1AA00124F88 /* LaunchScreen.storyboard */; };
 		5DBE6F46267BF1DE00124F88 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F45267BF1DE00124F88 /* MusicService.swift */; };
 		5DBE6F48267BF1EA00124F88 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DBE6F47267BF1EA00124F88 /* data.json */; };
+		5DBE6F5D267D232900124F88 /* QueueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F5C267D232900124F88 /* QueueListViewController.swift */; };
+		5DBE6F5F267D29CD00124F88 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F5E267D29CD00124F88 /* DataFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,27 @@
 		5DBE6F3F267BF1AA00124F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DBE6F45267BF1DE00124F88 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = "../../../../../Dropbox (DeveloperAcademy-BR)/Classes Content - 20:21/2021/Development/06-17 - UIKit Delegate + UITableView/Nano Resources/MusicService.swift"; sourceTree = "<group>"; };
 		5DBE6F47267BF1EA00124F88 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = "../../../../../Dropbox (DeveloperAcademy-BR)/Classes Content - 20:21/2021/Development/06-17 - UIKit Delegate + UITableView/Nano Resources/data.json"; sourceTree = "<group>"; };
+		5DBE6F4A267D10D800124F88 /* SF-Pro-Text-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Ultralight.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Ultralight.otf"; sourceTree = "<group>"; };
+		5DBE6F4B267D10D800124F88 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Semibold.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		5DBE6F4C267D10D800124F88 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-LightItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F4D267D10D800124F88 /* SF-Pro-Text-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-BlackItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-BlackItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F4E267D10D800124F88 /* SF-Pro-Text-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Black.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Black.otf"; sourceTree = "<group>"; };
+		5DBE6F4F267D10D800124F88 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-UltralightItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F50267D10D800124F88 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Regular.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		5DBE6F51267D10D800124F88 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		5DBE6F52267D10D800124F88 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-SemiboldItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F53267D10D800124F88 /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Thin.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Thin.otf"; sourceTree = "<group>"; };
+		5DBE6F54267D10D800124F88 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-MediumItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F55267D10D800124F88 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		5DBE6F56267D10D800124F88 /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-RegularItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F57267D10D800124F88 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-HeavyItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F58267D10D800124F88 /* SF-Pro-Text-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-ThinItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-ThinItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F59267D10D800124F88 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Heavy.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		5DBE6F5A267D10D800124F88 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Light.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		5DBE6F5B267D10D800124F88 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-BoldItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		5DBE6F5C267D232900124F88 /* QueueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueListViewController.swift; sourceTree = "<group>"; };
+		5DBE6F5E267D29CD00124F88 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		5DBE6F61267D29D700124F88 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +83,54 @@
 		5DBE6F30267BF1A800124F88 /* MusicChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				5DBE6F49267D10A900124F88 /* Fonts */,
 				5DBE6F47267BF1EA00124F88 /* data.json */,
+				5DBE6F60267D29D200124F88 /* Data */,
 				5DBE6F45267BF1DE00124F88 /* MusicService.swift */,
 				5DBE6F31267BF1A800124F88 /* AppDelegate.swift */,
 				5DBE6F33267BF1A800124F88 /* SceneDelegate.swift */,
 				5DBE6F35267BF1A800124F88 /* ViewController.swift */,
 				5DBE6F37267BF1A800124F88 /* Main.storyboard */,
+				5DBE6F5C267D232900124F88 /* QueueListViewController.swift */,
 				5DBE6F3A267BF1AA00124F88 /* Assets.xcassets */,
 				5DBE6F3C267BF1AA00124F88 /* LaunchScreen.storyboard */,
 				5DBE6F3F267BF1AA00124F88 /* Info.plist */,
 			);
 			path = MusicChallenge;
+			sourceTree = "<group>";
+		};
+		5DBE6F49267D10A900124F88 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5DBE6F4E267D10D800124F88 /* SF-Pro-Text-Black.otf */,
+				5DBE6F4D267D10D800124F88 /* SF-Pro-Text-BlackItalic.otf */,
+				5DBE6F55267D10D800124F88 /* SF-Pro-Text-Bold.otf */,
+				5DBE6F5B267D10D800124F88 /* SF-Pro-Text-BoldItalic.otf */,
+				5DBE6F59267D10D800124F88 /* SF-Pro-Text-Heavy.otf */,
+				5DBE6F57267D10D800124F88 /* SF-Pro-Text-HeavyItalic.otf */,
+				5DBE6F5A267D10D800124F88 /* SF-Pro-Text-Light.otf */,
+				5DBE6F4C267D10D800124F88 /* SF-Pro-Text-LightItalic.otf */,
+				5DBE6F51267D10D800124F88 /* SF-Pro-Text-Medium.otf */,
+				5DBE6F54267D10D800124F88 /* SF-Pro-Text-MediumItalic.otf */,
+				5DBE6F50267D10D800124F88 /* SF-Pro-Text-Regular.otf */,
+				5DBE6F56267D10D800124F88 /* SF-Pro-Text-RegularItalic.otf */,
+				5DBE6F4B267D10D800124F88 /* SF-Pro-Text-Semibold.otf */,
+				5DBE6F52267D10D800124F88 /* SF-Pro-Text-SemiboldItalic.otf */,
+				5DBE6F53267D10D800124F88 /* SF-Pro-Text-Thin.otf */,
+				5DBE6F58267D10D800124F88 /* SF-Pro-Text-ThinItalic.otf */,
+				5DBE6F4A267D10D800124F88 /* SF-Pro-Text-Ultralight.otf */,
+				5DBE6F4F267D10D800124F88 /* SF-Pro-Text-UltralightItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5DBE6F60267D29D200124F88 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5DBE6F61267D29D700124F88 /* data.json */,
+				5DBE6F5E267D29CD00124F88 /* DataFile.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +206,8 @@
 			files = (
 				5DBE6F36267BF1A800124F88 /* ViewController.swift in Sources */,
 				5DBE6F32267BF1A800124F88 /* AppDelegate.swift in Sources */,
+				5DBE6F5D267D232900124F88 /* QueueListViewController.swift in Sources */,
+				5DBE6F5F267D29CD00124F88 /* DataFile.swift in Sources */,
 				5DBE6F34267BF1A800124F88 /* SceneDelegate.swift in Sources */,
 				5DBE6F46267BF1DE00124F88 /* MusicService.swift in Sources */,
 			);
