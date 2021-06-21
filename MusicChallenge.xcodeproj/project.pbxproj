@@ -16,7 +16,11 @@
 		5DBE6F46267BF1DE00124F88 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F45267BF1DE00124F88 /* MusicService.swift */; };
 		5DBE6F48267BF1EA00124F88 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DBE6F47267BF1EA00124F88 /* data.json */; };
 		5DBE6F5D267D232900124F88 /* QueueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F5C267D232900124F88 /* QueueListViewController.swift */; };
-		5DBE6F5F267D29CD00124F88 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F5E267D29CD00124F88 /* DataFile.swift */; };
+		5DBE6F5F267D29CD00124F88 /* DataFile1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F5E267D29CD00124F88 /* DataFile1.swift */; };
+		5DBE6F63267D338000124F88 /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F62267D338000124F88 /* DataFile.swift */; };
+		5DBE6F65267D3A9700124F88 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F64267D3A9700124F88 /* FavoritesListViewController.swift */; };
+		5DBE6F6A267D471F00124F88 /* AlbumPlaylistHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F69267D471F00124F88 /* AlbumPlaylistHeaderView.swift */; };
+		5DBE6F6C267D4C5700124F88 /* AlbumPlaylistTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F6B267D4C5700124F88 /* AlbumPlaylistTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +53,12 @@
 		5DBE6F5A267D10D800124F88 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Light.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		5DBE6F5B267D10D800124F88 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-BoldItalic.otf"; path = "../../../../../../../../Library/Fonts/SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
 		5DBE6F5C267D232900124F88 /* QueueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueListViewController.swift; sourceTree = "<group>"; };
-		5DBE6F5E267D29CD00124F88 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		5DBE6F5E267D29CD00124F88 /* DataFile1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile1.swift; sourceTree = "<group>"; };
 		5DBE6F61267D29D700124F88 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		5DBE6F62267D338000124F88 /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
+		5DBE6F64267D3A9700124F88 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
+		5DBE6F69267D471F00124F88 /* AlbumPlaylistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPlaylistHeaderView.swift; sourceTree = "<group>"; };
+		5DBE6F6B267D4C5700124F88 /* AlbumPlaylistTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPlaylistTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +94,13 @@
 				5DBE6F49267D10A900124F88 /* Fonts */,
 				5DBE6F47267BF1EA00124F88 /* data.json */,
 				5DBE6F60267D29D200124F88 /* Data */,
+				5DBE6F66267D3E1200124F88 /* ViewController */,
 				5DBE6F45267BF1DE00124F88 /* MusicService.swift */,
 				5DBE6F31267BF1A800124F88 /* AppDelegate.swift */,
 				5DBE6F33267BF1A800124F88 /* SceneDelegate.swift */,
-				5DBE6F35267BF1A800124F88 /* ViewController.swift */,
 				5DBE6F37267BF1A800124F88 /* Main.storyboard */,
-				5DBE6F5C267D232900124F88 /* QueueListViewController.swift */,
+				5DBE6F6B267D4C5700124F88 /* AlbumPlaylistTableView.swift */,
+				5DBE6F69267D471F00124F88 /* AlbumPlaylistHeaderView.swift */,
 				5DBE6F3A267BF1AA00124F88 /* Assets.xcassets */,
 				5DBE6F3C267BF1AA00124F88 /* LaunchScreen.storyboard */,
 				5DBE6F3F267BF1AA00124F88 /* Info.plist */,
@@ -128,9 +137,20 @@
 			isa = PBXGroup;
 			children = (
 				5DBE6F61267D29D700124F88 /* data.json */,
-				5DBE6F5E267D29CD00124F88 /* DataFile.swift */,
+				5DBE6F5E267D29CD00124F88 /* DataFile1.swift */,
+				5DBE6F62267D338000124F88 /* DataFile.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		5DBE6F66267D3E1200124F88 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DBE6F35267BF1A800124F88 /* ViewController.swift */,
+				5DBE6F64267D3A9700124F88 /* FavoritesListViewController.swift */,
+				5DBE6F5C267D232900124F88 /* QueueListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +227,13 @@
 				5DBE6F36267BF1A800124F88 /* ViewController.swift in Sources */,
 				5DBE6F32267BF1A800124F88 /* AppDelegate.swift in Sources */,
 				5DBE6F5D267D232900124F88 /* QueueListViewController.swift in Sources */,
-				5DBE6F5F267D29CD00124F88 /* DataFile.swift in Sources */,
+				5DBE6F5F267D29CD00124F88 /* DataFile1.swift in Sources */,
 				5DBE6F34267BF1A800124F88 /* SceneDelegate.swift in Sources */,
 				5DBE6F46267BF1DE00124F88 /* MusicService.swift in Sources */,
+				5DBE6F65267D3A9700124F88 /* FavoritesListViewController.swift in Sources */,
+				5DBE6F6C267D4C5700124F88 /* AlbumPlaylistTableView.swift in Sources */,
+				5DBE6F6A267D471F00124F88 /* AlbumPlaylistHeaderView.swift in Sources */,
+				5DBE6F63267D338000124F88 /* DataFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
