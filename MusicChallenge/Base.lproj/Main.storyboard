@@ -57,6 +57,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="OxR-DK-vy6" firstAttribute="height" secondItem="fbl-ha-FtX" secondAttribute="height" multiplier="1.24138" id="L2X-Vv-L6d"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjH-lj-yKX">
                                                     <rect key="frame" x="380" y="32" width="14" height="22"/>
@@ -110,7 +113,7 @@
         <!--Album/Playlist Details-->
         <scene sceneID="Lmc-RB-l95">
             <objects>
-                <viewController title="Album/Playlist Details" id="25N-ow-WPj" customClass="AlbumPlaylistHeaderView" customModule="MusicChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Album/Playlist Details" id="25N-ow-WPj" customClass="AlbumPlaylistViewController" customModule="MusicChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hxw-lx-NNG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,19 +170,12 @@
                                     <constraint firstAttribute="trailing" secondItem="0Ag-uH-4xF" secondAttribute="trailing" constant="45" id="tZJ-ey-KDe"/>
                                     <constraint firstItem="DKw-vA-XiV" firstAttribute="leading" secondItem="h3m-Sf-656" secondAttribute="trailing" constant="15" id="uv7-fR-OHE"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="albumImageView" destination="h3m-Sf-656" id="nEi-mt-yg4"/>
-                                    <outlet property="albumTitleLabel" destination="0Ag-uH-4xF" id="qZR-YZ-IO3"/>
-                                    <outlet property="artistNameLabel" destination="1Oo-yB-PE2" id="g8Z-US-jxC"/>
-                                    <outlet property="releaseLabel" destination="LEY-xU-5MN" id="dIx-xx-bZe"/>
-                                    <outlet property="songsCountLabel" destination="DKw-vA-XiV" id="ehY-y3-Yhu"/>
-                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TZP-mY-Yxn">
                                 <rect key="frame" x="0.0" y="238" width="414" height="575"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="music-cell" rowHeight="61" id="INB-uO-UYE" customClass="AlbumPlaylistTableViewCell" customModule="MusicAppLayout" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="music-cell" rowHeight="61" id="INB-uO-UYE" customClass="AlbumPlaylistTableViewCell">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="INB-uO-UYE" id="Aln-0a-5ze">
@@ -195,38 +191,24 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-21-hN7">
-                                                    <rect key="frame" x="100" y="16" width="254" height="20"/>
+                                                    <rect key="frame" x="100" y="16" width="42.5" height="20"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohj-OL-cut">
-                                                    <rect key="frame" x="100" y="33" width="254" height="13"/>
+                                                    <rect key="frame" x="100" y="33" width="33" height="13"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJP-AR-Zko">
-                                                    <rect key="frame" x="374" y="15.5" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="JMb-yh-Tvs"/>
-                                                        <constraint firstAttribute="height" constant="30" id="fvQ-Ji-Zhk"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="didTapLike:" destination="INB-uO-UYE" eventType="touchUpInside" id="AYK-2g-0gb"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="PzM-DX-MpB" secondAttribute="bottom" constant="10" id="0XN-jS-bzi"/>
                                                 <constraint firstItem="Ohj-OL-cut" firstAttribute="leading" secondItem="PzM-DX-MpB" secondAttribute="trailing" constant="15" id="0Yh-wR-ZCc"/>
-                                                <constraint firstItem="DJP-AR-Zko" firstAttribute="centerY" secondItem="Aln-0a-5ze" secondAttribute="centerY" id="104-bW-oGq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ohj-OL-cut" secondAttribute="bottom" constant="4" id="1rx-vq-5Wu"/>
                                                 <constraint firstItem="PzM-DX-MpB" firstAttribute="leading" secondItem="Aln-0a-5ze" secondAttribute="leading" constant="15" id="5pX-Az-AhS"/>
                                                 <constraint firstItem="PzM-DX-MpB" firstAttribute="centerY" secondItem="Aln-0a-5ze" secondAttribute="centerY" id="Auf-NB-1M7"/>
-                                                <constraint firstItem="DJP-AR-Zko" firstAttribute="trailingMargin" secondItem="Ohj-OL-cut" secondAttribute="trailing" constant="42" id="Hyh-Fv-PKg"/>
-                                                <constraint firstItem="DJP-AR-Zko" firstAttribute="trailing" secondItem="Aln-0a-5ze" secondAttribute="trailingMargin" constant="10" id="QMi-nA-eUq"/>
-                                                <constraint firstItem="DJP-AR-Zko" firstAttribute="trailingMargin" secondItem="tfh-21-hN7" secondAttribute="trailing" constant="42" id="QN6-dD-YIa"/>
                                                 <constraint firstItem="tfh-21-hN7" firstAttribute="top" secondItem="Aln-0a-5ze" secondAttribute="topMargin" constant="5" id="R0V-9Q-Thw"/>
                                                 <constraint firstItem="Ohj-OL-cut" firstAttribute="top" secondItem="tfh-21-hN7" secondAttribute="bottomMargin" constant="5" id="U2d-Rb-zJa"/>
                                                 <constraint firstItem="PzM-DX-MpB" firstAttribute="top" secondItem="Aln-0a-5ze" secondAttribute="top" constant="10" id="fjI-hF-Q56"/>
@@ -234,10 +216,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="artistNameLabel" destination="Ohj-OL-cut" id="8Ph-dv-yJd"/>
-                                            <outlet property="heartButton" destination="DJP-AR-Zko" id="eu1-Pm-SsS"/>
-                                            <outlet property="musicImageView" destination="PzM-DX-MpB" id="pze-MI-2Da"/>
-                                            <outlet property="musicNameLabel" destination="tfh-21-hN7" id="8W7-SP-X34"/>
+                                            <outlet property="artistName" destination="Ohj-OL-cut" id="0es-RE-nJ6"/>
+                                            <outlet property="musicImage" destination="PzM-DX-MpB" id="msz-lN-EIr"/>
+                                            <outlet property="musicName" destination="tfh-21-hN7" id="ofH-88-Znx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -267,11 +248,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="albumImageView" destination="h3m-Sf-656" id="ega-hg-FXh"/>
-                        <outlet property="albumTitleLabel" destination="0Ag-uH-4xF" id="UOw-ot-Ere"/>
-                        <outlet property="artistNameLabel" destination="1Oo-yB-PE2" id="ePG-7o-MFG"/>
-                        <outlet property="countSongsLabel" destination="DKw-vA-XiV" id="C6d-8Z-QyY"/>
-                        <outlet property="releaseLabel" destination="LEY-xU-5MN" id="uTP-6C-LHj"/>
+                        <outlet property="albumTitle" destination="0Ag-uH-4xF" id="1Sz-VS-2WB"/>
+                        <outlet property="artistName" destination="1Oo-yB-PE2" id="Of8-fG-7dv"/>
+                        <outlet property="countSongs" destination="DKw-vA-XiV" id="p1u-kU-nle"/>
+                        <outlet property="imageView" destination="h3m-Sf-656" id="4UR-CR-ZeI"/>
+                        <outlet property="infoButton" destination="IuY-LW-Xi6" id="IUT-au-EWG"/>
+                        <outlet property="releaseLabel" destination="LEY-xU-5MN" id="v0k-Y6-AYm"/>
+                        <outlet property="tableView" destination="TZP-mY-Yxn" id="cXr-B3-fGX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5t-lD-dYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -409,7 +392,9 @@
         <scene sceneID="bNi-SD-2Oz">
             <objects>
                 <navigationController id="sx6-st-oAW" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="N75-Bi-sDO"/>
+                    <navigationItem key="navigationItem" id="N75-Bi-sDO">
+                        <barButtonItem key="rightBarButtonItem" image="chevron.compact.down" catalog="system" id="J7G-Ow-qkz"/>
+                    </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wyr-Pl-6UI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -493,7 +478,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="NLM-sz-DCC"/>
                     <connections>
-                        <segue destination="Ag0-4g-Xfg" kind="show" id="3uw-bd-A26"/>
+                        <segue destination="Ag0-4g-Xfg" kind="presentation" id="3uw-bd-A26"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M9-gL-Xmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -521,16 +506,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JDE-II-hnm">
-                                <rect key="frame" x="40" y="657" width="173" height="61"/>
+                                <rect key="frame" x="40" y="657" width="179" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome música" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmI-Ov-8nV">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="33.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhc-IY-kZs">
-                                        <rect key="frame" x="0.0" y="41" width="49" height="20"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="53.5" height="20.5"/>
                                         <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" systemColor="opaqueSeparatorColor"/>
@@ -584,16 +569,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="305" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-gd-S5U">
-                                <rect key="frame" x="20" y="76" width="374.5" height="22"/>
+                                <rect key="frame" x="20" y="76" width="379.5" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPp-bE-OJv">
-                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zob-nT-P9b">
-                                        <rect key="frame" x="355.5" y="0.0" width="19" height="22"/>
+                                        <rect key="frame" x="360.5" y="0.0" width="19" height="22"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" image="chevron.compact.down" catalog="system"/>
                                         <connections>
@@ -653,6 +638,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MEC-TI-vYd" kind="relationship" relationship="rootViewController" id="WFv-WG-NvO"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jR3-Ev-p06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
