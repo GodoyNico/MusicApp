@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  MusicChallenge
-//
-//  Created by Nicolas Godoy on 17/06/21.
-//
 
 import UIKit
 

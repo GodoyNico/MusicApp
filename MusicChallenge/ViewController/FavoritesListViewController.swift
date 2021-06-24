@@ -1,9 +1,3 @@
-//
-//  FavoritesListViewController.swift
-//  MusicChallenge
-//
-//  Created by Nicolas Godoy on 23/06/21.
-//
 
 import UIKit
 
@@ -82,17 +76,30 @@ extension FavoritesListViewController: UISearchBarDelegate {
 //MARK: - Protocol
 extension FavoritesListViewController: AlbumPlayListCellProtocol {
     func didRemoveFavoriteMusic(_ id: String) {
-        var musicIndex: Int?
-        favorites.enumerated().forEach { index, music in
-            if music.id == id {
-                musicIndex = index
-            }
-        }
+        let isSearching = searchBar.text?.isEmpty == false
+        let musics = isSearching ? filteredMusics : favorites
 
-        if let index = musicIndex {
+        if let index = findMusic(id: id, from: musics) {
             let indexPath = IndexPath(row: index, section: 0)
-            favorites.remove(at: index)
+            if isSearching {
+                filteredMusics.remove(at: index)
+                if let favoriteIndex = findMusic(id: id, from: favorites) {
+                    favorites.remove(at: favoriteIndex)
+                }
+
+            } else {
+                favorites.remove(at: index)
+            }
+
             tableView.deleteRows(at: [indexPath], with: .right)
         }
+    }
+
+    func findMusic(id: String, from musics: [Music]) -> Int? {
+        var musicIndex: Int?
+        musics.enumerated().forEach { index, music in
+            if music.id == id { musicIndex = index }
+        }
+        return musicIndex
     }
 }

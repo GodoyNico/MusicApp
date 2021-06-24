@@ -1,3 +1,4 @@
+
 import UIKit
 
 class AlbumPlaylistViewController: UIViewController {
@@ -21,14 +22,31 @@ class AlbumPlaylistViewController: UIViewController {
         imageView.image = UIImage(named: musicCollection!.id)
         albumTitle.text = musicCollection?.title
         albumCreator.text = musicCollection?.mainPerson
-        countSongs.text = String(musicCollection!.musics.count)
-        releaseLabel.text = "\(musicCollection!.referenceDate)"
+        countSongs.text = "\(String(musicCollection!.musics.count)) songs"
+    
+        if let date = musicCollection?.referenceDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM-dd-yyyy"
+            releaseLabel.text = "Released \(dateFormatter.string(from: date))"
+        }
         
         if musicCollection?.type.rawValue == "playlist" {
             infoButton.isEnabled = false
         }
         
         setupTableView()
+    }
+
+    @IBAction func openDetail(_ sender: Any) {
+        performSegue(withIdentifier: "InfoViewControllerSegue", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nav = segue.destination as? UINavigationController,
+           let controller = nav.children.first as? InfoViewController,
+           let collection = musicCollection {
+            controller.musicCollection = collection
+        }
     }
 
     func setupTableView() {

@@ -1,9 +1,4 @@
-//
-//  QueueListViewController.swift
-//  MusicChallenge
-//
-//  Created by Nicolas Godoy on 18/06/21.
-//
+
 
 import UIKit
 

@@ -1,9 +1,3 @@
-//
-//  LibraryCell.swift
-//  MusicChallenge
-//
-//  Created by Nicolas Godoy on 22/06/21.
-//
 
 import UIKit
 
