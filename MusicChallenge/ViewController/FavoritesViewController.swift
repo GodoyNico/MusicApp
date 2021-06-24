@@ -45,7 +45,7 @@
 //        let isFavorite = musicService.favoriteMusics.contains(music)
 //        cell.music = music
 //        cell.musicService = musicService
-//        cell.generate(image: image, artistName: music.artist, musicName: music.title, isFavorite: isFavorite)
+//
 //        return cell
 //    }
 //}

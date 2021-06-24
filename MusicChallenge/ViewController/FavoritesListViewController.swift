@@ -1,45 +1,91 @@
-////
-////  FavoritesListViewController.swift
-////  MusicChallenge
-////
-////  Created by Nicolas Godoy on 18/06/21.
-////
 //
-//import UIKit
+//  FavoritesListViewController.swift
+//  MusicChallenge
 //
-//class FavoritesListViewController: UIViewController {
+//  Created by Nicolas Godoy on 23/06/21.
 //
-//    @IBOutlet weak var musicImageView: UIImageView!
-//    @IBOutlet weak var musicLabel: UILabel!
-//    @IBOutlet weak var artistNameLabel: UILabel!
-//    @IBOutlet weak var favoriteButton: UIButton!
-//
-//    var music: Music?
-//    var musicService: MusicService?
-//
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-//
-//    func generate(image: UIImage, artistName: String, musicName: String, isFavorite: Bool) {
-//        musicImageView.image = image
-//        musicLabel.text = musicName
-//        artistNameLabel.text = artistName
-//        favoriteButton.setImage(isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart"), for: .normal)
-//        favoriteButton.tintColor = isFavorite ? .systemRed : .systemGray
-//    }
-//    @IBAction func likeMusic(_ sender: Any) {
-//        guard let musicService = musicService, let music = music else {
-//            return
-//        }
-//        var isFavorite = musicService.favoriteMusics.contains(music)
-//        musicService.toggleFavorite(music: music, isFavorite: isFavorite)
-//        isFavorite = !isFavorite
-//        favoriteButton.setImage (isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart"), for: .normal)
-//        favoriteButton.tintColor = isFavorite ? .systemRed : .systemGray
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//    }
-//}
+
+import UIKit
+
+class FavoritesListViewController: UIViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+
+    var service: MusicService?
+    var filteredMusics: [Music] = []
+    var favorites: [Music] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        service = try? MusicService()
+        setupSearchBar()
+        setupTableView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchFavorites()
+    }
+
+    func fetchFavorites() {
+        guard let service = service else { return }
+        favorites = service.favoriteMusics
+        tableView.reloadData()
+    }
+
+    func setupSearchBar() {
+        searchBar.delegate = self
+    }
+
+    func setupTableView() {
+        tableView.dataSource = self
+    }
+}
+
+extension FavoritesListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        searchBar.text?.isEmpty == true ? favorites.count : filteredMusics.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "music-cell", for: indexPath) as? AlbumPlaylistTableViewCell else {
+            return UITableViewCell()
+        }
+        let selectedElements = searchBar.text?.isEmpty == true ? favorites : filteredMusics
+        let music = selectedElements[indexPath.row]
+        cell.service = service
+        cell.setupCell(selectedMusic: music)
+        cell.delegate = self
+        return cell
+    }
+}
+
+extension FavoritesListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        var musics: [Music] = []
+        favorites.forEach {
+            if $0.title.contains(searchText) {
+                musics.append($0)
+            }
+        }
+        filteredMusics = musics
+        tableView.reloadData()
+    }
+}
+
+extension FavoritesListViewController: AlbumPlayListCellProtocol {
+    func didRemoveFavoriteMusic(_ id: String) {
+        var musicIndex: Int?
+        favorites.enumerated().forEach { index, music in
+            if music.id == id {
+                musicIndex = index
+            }
+        }
+
+        if let index = musicIndex {
+            let indexPath = IndexPath(row: index, section: 0)
+            favorites.remove(at: index)
+            tableView.deleteRows(at: [indexPath], with: .right)
+        }
+    }
+}

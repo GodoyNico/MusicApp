@@ -3,9 +3,10 @@ import UIKit
 class LibraryViewController: UIViewController {
     
     // MARK: - Properties
-    private var collection: [MusicCollection] = []
-    private let cellIdentifier = "library-cell"
-    private var music: MusicCollection?
+    var collection: [MusicCollection] = []
+    let cellIdentifier = "library-cell"
+    var music: MusicCollection?
+    var service: MusicService?
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +27,7 @@ class LibraryViewController: UIViewController {
         guard let service = try? MusicService() else {
             return
         }
-
+        self.service = service
         collection = service.loadLibrary()
         tableView.reloadData()
     }
@@ -34,7 +35,8 @@ class LibraryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? AlbumPlaylistViewController,
            let sender = sender as? MusicCollection {
-            controller.music = sender
+            controller.musicCollection = sender
+            controller.musicService = service
         }
     }
 }
