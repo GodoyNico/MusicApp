@@ -8,13 +8,17 @@
 import UIKit
 
 class FavoritesListViewController: UIViewController {
+    
+    //MARK: - Outlets
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK: - Properties
     var service: MusicService?
     var filteredMusics: [Music] = []
     var favorites: [Music] = []
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         service = try? MusicService()
@@ -42,6 +46,7 @@ class FavoritesListViewController: UIViewController {
     }
 }
 
+//MARK: - DataSource
 extension FavoritesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         searchBar.text?.isEmpty == true ? favorites.count : filteredMusics.count
@@ -60,6 +65,7 @@ extension FavoritesListViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - Delegate
 extension FavoritesListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         var musics: [Music] = []
@@ -73,6 +79,7 @@ extension FavoritesListViewController: UISearchBarDelegate {
     }
 }
 
+//MARK: - Protocol
 extension FavoritesListViewController: AlbumPlayListCellProtocol {
     func didRemoveFavoriteMusic(_ id: String) {
         var musicIndex: Int?
