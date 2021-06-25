@@ -15,6 +15,7 @@
 		5D8DE2F9268504850061140E /* AlbumInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DE2F8268504850061140E /* AlbumInfoTableViewCell.swift */; };
 		5D8DE2FB268504920061140E /* ArtistInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DE2FA268504920061140E /* ArtistInfoTableViewCell.swift */; };
 		5D8DE303268506390061140E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DE302268506390061140E /* InfoViewController.swift */; };
+		5D8DE307268549990061140E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8DE306268549990061140E /* PlayerViewController.swift */; };
 		5DA519EE268256E4005EBC31 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA519ED268256E4005EBC31 /* MusicService.swift */; };
 		5DBE6F32267BF1A800124F88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F31267BF1A800124F88 /* AppDelegate.swift */; };
 		5DBE6F34267BF1A800124F88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE6F33267BF1A800124F88 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		5D8DE2F8268504850061140E /* AlbumInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoTableViewCell.swift; sourceTree = "<group>"; };
 		5D8DE2FA268504920061140E /* ArtistInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoTableViewCell.swift; sourceTree = "<group>"; };
 		5D8DE302268506390061140E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		5D8DE306268549990061140E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		5DA519ED268256E4005EBC31 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
 		5DBE6F2E267BF1A800124F88 /* MusicChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBE6F31267BF1A800124F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				5D8DE2E426826ED40061140E /* LibraryViewController.swift */,
 				5D8DE2EE268415750061140E /* FavoritesListViewController.swift */,
 				5D8DE302268506390061140E /* InfoViewController.swift */,
+				5D8DE306268549990061140E /* PlayerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				5DBE6F36267BF1A800124F88 /* ViewController.swift in Sources */,
 				5D8DE2E526826ED40061140E /* LibraryViewController.swift in Sources */,
 				5DA519EE268256E4005EBC31 /* MusicService.swift in Sources */,
+				5D8DE307268549990061140E /* PlayerViewController.swift in Sources */,
 				5D8DE2EF268415750061140E /* FavoritesListViewController.swift in Sources */,
 				5DBE6F32267BF1A800124F88 /* AppDelegate.swift in Sources */,
 				5DBE6F5D267D232900124F88 /* QueueListViewController.swift in Sources */,
