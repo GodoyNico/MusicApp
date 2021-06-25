@@ -782,7 +782,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHj-tf-Xnp">
-                                        <rect key="frame" x="344" y="8" width="30" height="21"/>
+                                        <rect key="frame" x="344" y="8" width="30" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="pTF-gw-0v9"/>
                                         </constraints>
